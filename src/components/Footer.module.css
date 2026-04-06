@@ -1,0 +1,33 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid gray;
+    font-size: larger;
+    padding: 1rem;
+}
+
+.subTitulo{
+    color: rgb(60, 194, 214);
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+    max-width: 200px;
+}
+
+.sobre{
+    max-width: 50%;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
+
+.autoria{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 3rem;
+    padding-left: 3rem;
+}
