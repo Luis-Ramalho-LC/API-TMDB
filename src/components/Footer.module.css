@@ -1,9 +1,18 @@
 .footer{
     display: flex;
     flex-direction: column;
-    border-top: 1px solid gray;
     font-size: larger;
     padding: 1rem;
+}
+
+.footerContent{
+    padding: 1rem;
+}
+
+.titulo{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
 }
 
 .subTitulo{
@@ -12,6 +21,7 @@
     font-size: 1.5rem;
     border-bottom: 1px solid black;
     max-width: 200px;
+    border-image: linear-gradient(to right, black, transparent) 1;
 }
 
 .sobre{
@@ -27,7 +37,11 @@
 
 .autoria{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 45% 50%;
     column-gap: 3rem;
     padding-left: 3rem;
+}
+
+.link:hover{
+    text-decoration: underline;
 }

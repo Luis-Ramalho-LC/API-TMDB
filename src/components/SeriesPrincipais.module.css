@@ -1,0 +1,33 @@
+.carousel{
+    margin: auto;
+    width: 70%;
+}
+
+.slide{
+    border-radius: 1rem;
+}
+
+.titulo{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    margin: 2rem 1rem;
+}
+
+.detalhesCarousel{
+    color: white;
+    width: 100%;
+    margin: 40% auto;
+}
+
+.detalhesTitulo{
+    font-size: 1.7rem;
+    text-shadow: 0 0 6px black;
+}
+
+.detalhesOverview{
+    font-size: 1.3rem;
+    text-shadow: 0 0 6px black;
+    max-width: 80%;
+    margin: auto;
+}

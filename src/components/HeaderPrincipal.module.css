@@ -5,10 +5,14 @@
 }
 
 .link{
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bolder;
     color: black;
     margin: 3rem;
+}
+
+.link:hover{
+    text-decoration: underline;
 }
 
 .header{
