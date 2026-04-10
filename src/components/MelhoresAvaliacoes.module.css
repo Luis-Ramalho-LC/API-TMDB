@@ -1,0 +1,41 @@
+.titulo{
+    font-size: 1.8rem;
+    font-weight: bolder;
+    border-bottom: 2px solid black;
+    margin: 1rem;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: repeat(20, 20%);
+    margin: 1rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.img:hover{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.cardInfo{
+    display: none;
+    color: white;
+    text-shadow: 0 0 6px black;
+}
+
+.container:hover .img{
+    transform: scale(1.1);
+}
+
+.container:hover .cardInfo{
+    z-index: 1;
+    transform: scale(1.1);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(195, 191, 191);
+    border-radius: 0 0 1rem 1rem;
+    padding: .5rem;
+}

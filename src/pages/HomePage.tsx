@@ -1,13 +1,15 @@
 import HeaderPrincipal from "../components/HeaderPrincipal.tsx"
 import Footer from "../components/Footer.tsx"
-import SeriesPrincipais from "../components/SeriesPrincipais.tsx"
+import SeriesPopulares from "../components/SeriesPopulares.tsx"
+import MelhoresAvaliacoes from "../components/MelhoresAvaliacoes.tsx"
 
 export default function HomePage(){
 
     return(
         <>
             <HeaderPrincipal />
-            <SeriesPrincipais />
+            <SeriesPopulares />
+            <MelhoresAvaliacoes />
             <Footer/>
         </>
     )
