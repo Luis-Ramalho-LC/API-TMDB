@@ -1,4 +1,4 @@
-import "../declarations.ts"
+import "./declarations.ts"
 import styles from './HeaderPrincipal.module.css'
 
 function HeaderPrincipal(){
