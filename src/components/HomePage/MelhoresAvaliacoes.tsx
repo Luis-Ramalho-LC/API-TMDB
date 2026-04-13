@@ -2,6 +2,7 @@ import styles from "./MelhoresAvaliacoes.module.css"
 import "../declarations.ts"
 import axios from "axios"
 import { useState } from "react"
+import { Link, useParams } from "react-router-dom"
 
 export default function MelhoresAvaliacoes(){
 
@@ -41,8 +42,8 @@ export default function MelhoresAvaliacoes(){
             <div className="relative overflow-hidden">
                 <div className={`${styles.conteudo}`}>
                     {melhoresAvaliacoes.map(serie => 
+                    <Link key={serie.name}  to={`/Detalhes/${serie.id}`}>
                     <div 
-                    key={serie.name} 
                     className={`${styles.container} grid m-3 transition-transform ease-out duration-500`} 
                     style={{transform: `translateX(-${slideAtual * 408}%)`}}
                     >
@@ -53,6 +54,7 @@ export default function MelhoresAvaliacoes(){
                             <p>Avaliação: {serie.vote_average}</p>
                         </div>
                     </div>
+                    </Link>
                     )}
                 </div>
                 <div className="inset-0">
