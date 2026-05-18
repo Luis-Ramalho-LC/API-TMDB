@@ -1,4 +1,4 @@
-import styles from "./SeriesPopulares.module.css";
+import styles from "./SeriesFavoritas.module.css";
 import "../declarations.ts";
 
 export default function SeriesFavoritas() {

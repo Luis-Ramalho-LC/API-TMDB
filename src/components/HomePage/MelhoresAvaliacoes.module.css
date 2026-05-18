@@ -1,7 +1,8 @@
 .titulo{
     font-size: 1.8rem;
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    color: #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
     margin: 1rem;
 }
 
@@ -35,7 +36,7 @@
     transform: scale(1.1);
     display: flex;
     flex-direction: column;
-    background-color: rgb(195, 191, 191);
+    background-color: #1e293b;
     border-radius: 0 0 1rem 1rem;
     padding: .5rem;
 }

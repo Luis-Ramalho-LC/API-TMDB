@@ -1,6 +1,39 @@
 .titulo{
     font-size: 1.8rem;
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    color: #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
     margin: 1rem;
+}
+
+.content{
+    display: flex;
+    margin: 0 1rem 1rem;
+    background-color: #1e293b;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.contentInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: larger;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 6px black;
+    margin: 0 1rem;
+}
+
+.nomeDaSerie{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitulo{
+    font-size: x-large;
+}
+
+.body{
+    background-color: #121212;
 }

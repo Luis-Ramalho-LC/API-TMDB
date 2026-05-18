@@ -8,9 +8,10 @@ export default function VisaoGeral(){
     interface seriesInfo{
         id: number;
         name: string;
+        tagline: string;
+        first_air_date: string;
         overview: string;
         backdrop_path: string;
-        popularity: string;
         vote_average: number;
     }
 
@@ -30,17 +31,25 @@ export default function VisaoGeral(){
     .request(options)
     .then(res => setSerie(res.data))
     .catch(err => console.error(err));
-
+    
     return(
-        <>
+        <section className={styles.body}>
             <p className={styles.titulo}>Visão Geral</p>
-            <img src={`https://image.tmdb.org/t/p/w780/${serie?.backdrop_path}`} alt={serie?.name} />
-            <div>
-                <p>{serie?.name}</p>
-                <p>{serie?.overview}</p>
-                <p>{serie?.popularity}</p>
-                <p>{serie?.vote_average}</p>
+            <div className={styles.content}>
+                <img src={`https://image.tmdb.org/t/p/w780/${serie?.backdrop_path}`} alt={serie?.name} />
+                <div className={styles.contentInfo}>
+                    <div className={styles.nomeDaSerie}>
+                        <p className={styles.subtitulo}>{serie?.name} ({serie?.first_air_date.slice(0,4)})</p>
+                        <i className="fa-solid fa-heart text-red-500"></i>
+                    </div>
+                    <i>{serie?.tagline}</i>
+                    <div>
+                        <p className={styles.subtitulo}>Sinopse</p>
+                        <p>{serie?.overview}</p>
+                    </div>
+                    <p>Avaliação: {serie?.vote_average ? (serie.vote_average * 10 + '').slice(0,4) + "%" : "Indisponível"}</p>
+                </div>
             </div>
-        </>
+        </section>
     )
 }

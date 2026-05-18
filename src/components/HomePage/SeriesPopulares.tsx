@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import styles from "./SeriesPopulares.module.css"
 import "../declarations.ts"
+import { Link } from "react-router-dom"
 
 export default function SeriesPopulares(){
 
@@ -31,33 +32,42 @@ export default function SeriesPopulares(){
     .then(res => setSeries(res.data.results))
     .catch(err => console.error(err));
 
-    const anterior = () => setSlideAtual((slideAtual) => (slideAtual == 0 ? series.length - 1 : slideAtual - 1))
-    const proximo = () => setSlideAtual((slideAtual) => (slideAtual == series.length - 1 ? 0 : slideAtual + 1))
+    const proximo = () => {
+        setSlideAtual((slideAtual) => (slideAtual === series.length - 1 ? 0 : slideAtual + 1));
+    };
+
+    const anterior = () => {
+        setSlideAtual((slideAtual) => (slideAtual === 0 ? series.length - 1 : slideAtual - 1));
+    };
 
     useEffect(() => {
-        const slideInterval = setInterval(() => {setSlideAtual((prev) => (prev === series.length - 1? 0: prev + 1))}, 5000)
-        return () => clearInterval(slideInterval)
-    }, [series.length])
+        const slideInterval = setInterval(() => {
+            proximo();
+        }, 5000);
+
+        return () => clearInterval(slideInterval);
+    }, [slideAtual, series.length]);
 
     return(
         <section>
             <h2 className={styles.titulo}>Séries Populares</h2>
             
             <div id="default-carousel" className={`relative w-200 ${styles.carousel}`} data-carousel="slide">
-                
                 <div className="relative h-56 overflow-hidden rounded-base md:h-150">
                     
                     {series.map((serie, index) => (
-                        <div key={serie.id} className="duration-700 ease-out" data-carousel-item>
-                            <img 
-                            src={`https://image.tmdb.org/t/p/original/${serie.backdrop_path}`} 
-                            className={`absolute ${slideAtual == index? 'block' : 'hidden'} w-full ${styles.slide}`} 
-                            alt={serie.name}></img>
-                            <div className={`absolute ${slideAtual == index? 'block' : 'hidden'} ${styles.detalhesCarousel}`}>
-                                <p className={`flex justify-center  ${styles.detalhesTitulo}`}>{serie.name}</p>
-                                <p className={`flex justify-center ${styles.detalhesOverview}`}>{serie.overview.slice(0, 160) + "..."}</p>
+                        <Link key={serie.name}  to={`/Detalhes/${serie.id}`}>
+                            <div key={serie.id} className="duration-700 ease-out" data-carousel-item>
+                                <img 
+                                src={`https://image.tmdb.org/t/p/original/${serie.backdrop_path}`} 
+                                className={`absolute ${slideAtual == index? 'block' : 'hidden'} w-full ${styles.slide}`} 
+                                alt={serie.name}></img>
+                                <div className={`absolute ${slideAtual == index? 'block' : 'hidden'} ${styles.detalhesCarousel}`}>
+                                    <p className={`flex justify-center  ${styles.detalhesTitulo}`}>{serie.name}</p>
+                                    <p className={`flex justify-center ${styles.detalhesOverview}`}>{serie.overview.slice(0, 160) + "..."}</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
 
                 </div>

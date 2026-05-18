@@ -10,7 +10,8 @@
 .titulo{
     font-size: 1.8rem;
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    color: #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
     margin: 2rem 1rem;
 }
 

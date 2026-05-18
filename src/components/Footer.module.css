@@ -3,29 +3,36 @@
     flex-direction: column;
     font-size: larger;
     padding: 1rem;
+    background-color: #121212;
+    color: white;
 }
 
 .footerContent{
     padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 3rem;
+    
 }
 
 .titulo{
     font-size: 1.8rem;
     font-weight: bolder;
-    border-bottom: 2px solid black;
+    color: #a3a3a3;
+    border-bottom: 2px solid #a3a3a3;
 }
 
 .subTitulo{
-    color: rgb(60, 194, 214);
+    color: #a3a3a3;
     font-weight: bolder;
     font-size: 1.5rem;
-    border-bottom: 1px solid black;
-    max-width: 200px;
-    border-image: linear-gradient(to right, black, transparent) 1;
+    border-bottom: 1px solid #a3a3a3;
+    max-width: 250px;
+    border-image: linear-gradient(to right, #a3a3a3, transparent) 1;
 }
 
 .sobre{
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .section{
@@ -36,9 +43,7 @@
 }
 
 .autoria{
-    display: grid;
-    grid-template-columns: 45% 50%;
-    column-gap: 3rem;
+    
     padding-left: 3rem;
 }
 
