@@ -4,7 +4,7 @@ import styles from "./Footer.module.css"
 export default function Footer(){
     return(
         <footer className={styles.footer}>
-            <p className={styles.titulo}>Informações do Autor</p>
+            <p className={styles.titulo}>Informações do Desenvolvedor</p>
             <div className={styles.footerContent}>    
                 <div className={styles.sobre}>
                     <p className={styles.subTitulo}>Sobre</p>

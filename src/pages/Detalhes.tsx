@@ -1,4 +1,5 @@
 import VisaoGeral from "../components/Detalhes/VisaoGeral.tsx"
+import Elenco from "../components/Detalhes/Elenco.tsx"
 import HeaderPrincipal from "../components/HeaderPrincipal.tsx"
 import Footer from "../components/Footer.tsx"
 
@@ -7,6 +8,7 @@ export default function Detalhes(){
         <>
             <HeaderPrincipal />
             <VisaoGeral />
+            <Elenco />
             <Footer />
         </>
     )
